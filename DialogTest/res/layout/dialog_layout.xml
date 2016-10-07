@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="270dp"
+    android:layout_height="325dp"
+    android:orientation="vertical" 
+    android:background="#2d2f33">
+    <RelativeLayout 
+        android:id="@+id/id_top_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView android:text="收藏至歌单"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textColor="#cbcccc"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+       <com.example.dialogtest.view.WaveLayout 
+	    android:layout_width="35dp"
+	    android:layout_height="35dp"
+	    android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp">
+        <ImageView
+            android:id="@+id/id_cancel_img"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:src="@drawable/cancelgray"/>
+        </com.example.dialogtest.view.WaveLayout>
+    </RelativeLayout>
+    <com.example.dialogtest.view.WaveLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+	<LinearLayout android:id="@+id/id_new_songlist_layout"
+	    android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/create"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"/>
+	    <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="10dp"
+	        android:textSize="16sp"
+	        android:layout_gravity="center"
+	        android:text="新建歌单"
+	        android:textColor="#ffffff"/>
+	</LinearLayout>
+	</com.example.dialogtest.view.WaveLayout>
+	
+    <com.example.dialogtest.view.WaveLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+	<LinearLayout android:id="@+id/id_my_storage_layout"
+	    android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/likesong"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"/>
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical">
+	        <TextView 
+	            android:layout_marginLeft="10dp"
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1.5"
+	            android:text="我喜欢的音乐"
+	            android:textColor="#ffffff"
+	            android:gravity="center_vertical"
+	            android:textSize="14sp"/>
+	        <TextView
+	            android:layout_marginLeft="10dp"
+	            android:id="@+id/id_songcount_tv" 
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:gravity="center_vertical"
+	            android:textColor="#cbcccc"
+	            android:textSize="11sp"/>
+	    </LinearLayout>
+	</LinearLayout>
+	</com.example.dialogtest.view.WaveLayout>
+	<ListView 
+	    android:background="#00000000"
+	    android:id="@+id/id_listview"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"></ListView>
+</LinearLayout>
